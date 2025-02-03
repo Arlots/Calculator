@@ -7,6 +7,34 @@
         <script src="./script.js" defer></script>
     </head>
     <body>
+        <div id="calculatorBody">
+            <div id="evaluationDisplay">
+                <p id="evaluationText"></p>
+            </div>
+
+            <div id="subEvaluationDisplay">
+                <p id="subEvaluationText"></p>
+            </div>
+
+            <div id="buttonContainer">
+                <button class="button" onclick="insertSeven()" id="sevenButton">7</button>
+                <button class="button" onclick="insertEight()" id="eightButton">8</button>
+                <button class="button" onclick="insertNine()" id="nineButton">9</button>
+                <button class="button" onclick="insertDivide()" id="divideButton">/</button>
+                <button class="button" onclick="insertFour()" id="fourButton">4</button>
+                <button class="button" onclick="insertFive()" id="fiveButton">5</button>
+                <button class="button" onclick="insertSix()" id="sixButton">6</button>
+                <button class="button" onclick="insertMultiply()" id="multiplyButton">*</button>
+                <button class="button" onclick="insertOne()" id="oneButton">1</button>
+                <button class="button" onclick="insertTwo()" id="twoButton">2</button>
+                <button class="button" onclick="insertThree()" id="threeButton">3</button>
+                <button class="button" onclick="insertMinus()" id="minusButton">-</button>
+                <button class="button" id="clearButton">clear</button>
+                <button class="button" onclick="insertZero()" id="zeroButton">0</button>
+                <button class="button" onclick="insertDecimal()" id="decimalButton">.</button>
+                <button class="button" id="evaluateButton">=</button>
+            </div>
+        </div>
     </body>
 
 </html>

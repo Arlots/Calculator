@@ -1,0 +1,67 @@
+#calculatorBody {
+    height: 500px;
+    width: 400px;
+    border: 2px, solid, black;
+    background-color: #b19cd9;
+}
+
+#evaluationDisplay {
+    height: 75px;
+    width: 300px;
+    border: 2px, solid, black;
+    margin-top: 25px;
+    margin-left: 50px;
+    background-color: #D4FAFA;
+}
+
+#subEvaluationDisplay {
+    height: 50px;
+    width: 150px;
+    border: 2px, solid, black;
+    margin-top: 5px;
+    margin-left: 200px;
+    background-color: #D4FAFA;
+
+}
+
+#buttonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    column-gap: 12.5px;
+    row-gap: 12.5px;
+    margin-left: 50px;
+    margin-top: 25px;
+    justify-content: center;
+    
+}
+
+
+.button {
+    height: 60px;
+    width: 60px;
+    border: 2px, solid, black;
+    background-color: #D4FAFA;
+}
+
+.button:hover {
+    transform: scale(1.2);
+}
+
+#evaluationText, #subEvaluationText {
+    text-align: right;
+    margin-right: 5px;
+} 
+
+#evaluationText {
+    font-size: 35px;
+    margin-bottom: 17.5px;
+    margin-top: 17.5px;
+}
+
+#subEvaluationText {
+    font-size: 25px;
+    margin-bottom: 12.5px;
+    margin-top: 12.5px;
+
+}

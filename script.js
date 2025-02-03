@@ -23,9 +23,9 @@ function division(term1, operand, term2) {
     }
 };
 
-let userNumberOne = Number(prompt("What is your first number?"));
-let userOperator = prompt("What operator would you like to use?");
-let userNumberTwo = Number(prompt("What is your second number?"));
+// let userNumberOne = Number(prompt("What is your first number?"));
+// let userOperator = prompt("What operator would you like to use?");
+// let userNumberTwo = Number(prompt("What is your second number?"));
 
 function evaluate(userNumberOne, userOperator, userNumberTwo) {
     let result;
@@ -43,4 +43,73 @@ function evaluate(userNumberOne, userOperator, userNumberTwo) {
     console.log(result);
 }
 
-evaluate(userNumberOne, userOperator, userNumberTwo);
+function insertSeven(){
+    numberValue = document.getElementById("sevenButton").textContent;
+    document.getElementById("evaluationText").innerText += numberValue;
+}
+
+function insertEight(){
+    numberValue = document.getElementById("eightButton").textContent;
+    document.getElementById("evaluationText").innerText += numberValue;
+}
+
+function insertNine(){
+    numberValue = document.getElementById("nineButton").textContent;
+    document.getElementById("evaluationText").innerText += numberValue;
+}
+
+function insertDivide(){
+    numberValue = document.getElementById("divideButton").textContent;
+    document.getElementById("evaluationText").innerText += numberValue;
+}
+
+function insertFour(){
+    numberValue = document.getElementById("fourButton").textContent;
+    document.getElementById("evaluationText").innerText += numberValue;
+}
+
+function insertFive(){
+    numberValue = document.getElementById("fiveButton").textContent;
+    document.getElementById("evaluationText").innerText += numberValue;
+}
+
+function insertSix(){
+    numberValue = document.getElementById("sixButton").textContent;
+    document.getElementById("evaluationText").innerText += numberValue;
+}
+
+function insertMultiply(){
+    numberValue = document.getElementById("multiplyButton").textContent;
+    document.getElementById("evaluationText").innerText += numberValue;
+}
+
+function insertOne(){
+    numberValue = document.getElementById("oneButton").textContent;
+    document.getElementById("evaluationText").innerText += numberValue;
+}
+
+function insertTwo(){
+    numberValue = document.getElementById("twoButton").textContent;
+    document.getElementById("evaluationText").innerText += numberValue;
+}
+
+function insertThree(){
+    numberValue = document.getElementById("threeButton").textContent;
+    document.getElementById("evaluationText").innerText += numberValue;
+}
+
+function insertMinus(){
+    numberValue = document.getElementById("minusButton").textContent;
+    document.getElementById("evaluationText").innerText += numberValue;
+}
+
+function insertZero(){
+    numberValue = document.getElementById("zeroButton").textContent;
+    document.getElementById("evaluationText").innerText += numberValue;
+}
+
+function insertDecimal(){
+    numberValue = document.getElementById("decimalButton").textContent;
+    document.getElementById("evaluationText").innerText += numberValue;
+}
+

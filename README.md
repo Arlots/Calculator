@@ -17,13 +17,13 @@ divide
 
 - *done* Create a new function operate that takes an operator and two numbers and then calls one of the above functions on the numbers.
 
-- Create a basic HTML calculator with buttons for each digit and operator (including =).
+- *done* Create a basic HTML calculator with buttons for each digit and operator (including =).
 
 Don’t worry about making them functional just yet.
 
-- There should also be a display for the calculator. Go ahead and fill it with some dummy numbers so it looks correct.
+- *done* There should also be a display for the calculator. Go ahead and fill it with some dummy numbers so it looks correct.
 
-- Add a “clear” button.
+- *done* Add a “clear” button.
 
 - Create the functions that populate the display when you click the digit buttons. You should store the content of the display (the number) in a variable for use in the next step.
 
