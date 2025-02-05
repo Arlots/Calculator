@@ -42,74 +42,83 @@ function evaluate(userNumberOne, userOperator, userNumberTwo) {
 
     console.log(result);
 }
+// this is the base code for inserting values, but can I condense it?
+// function insertSeven(){
+//     numberValue = document.getElementById("sevenButton").textContent;
+//     document.getElementById("evaluationText").innerText += numberValue;
+// }
 
-function insertSeven(){
-    numberValue = document.getElementById("sevenButton").textContent;
-    document.getElementById("evaluationText").innerText += numberValue;
-}
+// function insertEight(){
+//     numberValue = document.getElementById("eightButton").textContent;
+//     document.getElementById("evaluationText").innerText += numberValue;
+// }
 
-function insertEight(){
-    numberValue = document.getElementById("eightButton").textContent;
-    document.getElementById("evaluationText").innerText += numberValue;
-}
+// function insertNine(){
+//     numberValue = document.getElementById("nineButton").textContent;
+//     document.getElementById("evaluationText").innerText += numberValue;
+// }
 
-function insertNine(){
-    numberValue = document.getElementById("nineButton").textContent;
-    document.getElementById("evaluationText").innerText += numberValue;
-}
+// function insertDivide(){
+//     numberValue = document.getElementById("divideButton").textContent;
+//     document.getElementById("evaluationText").innerText += numberValue;
+// }
 
-function insertDivide(){
-    numberValue = document.getElementById("divideButton").textContent;
-    document.getElementById("evaluationText").innerText += numberValue;
-}
+// function insertFour(){
+//     numberValue = document.getElementById("fourButton").textContent;
+//     document.getElementById("evaluationText").innerText += numberValue;
+// }
 
-function insertFour(){
-    numberValue = document.getElementById("fourButton").textContent;
-    document.getElementById("evaluationText").innerText += numberValue;
-}
+// function insertFive(){
+//     numberValue = document.getElementById("fiveButton").textContent;
+//     document.getElementById("evaluationText").innerText += numberValue;
+// }
 
-function insertFive(){
-    numberValue = document.getElementById("fiveButton").textContent;
-    document.getElementById("evaluationText").innerText += numberValue;
-}
+// function insertSix(){
+//     numberValue = document.getElementById("sixButton").textContent;
+//     document.getElementById("evaluationText").innerText += numberValue;
+// }
 
-function insertSix(){
-    numberValue = document.getElementById("sixButton").textContent;
-    document.getElementById("evaluationText").innerText += numberValue;
-}
+// function insertMultiply(){
+//     numberValue = document.getElementById("multiplyButton").textContent;
+//     document.getElementById("evaluationText").innerText += numberValue;
+// }
 
-function insertMultiply(){
-    numberValue = document.getElementById("multiplyButton").textContent;
-    document.getElementById("evaluationText").innerText += numberValue;
-}
+// function insertOne(){
+//     numberValue = document.getElementById("oneButton").textContent;
+//     document.getElementById("evaluationText").innerText += numberValue;
+// }
 
-function insertOne(){
-    numberValue = document.getElementById("oneButton").textContent;
-    document.getElementById("evaluationText").innerText += numberValue;
-}
+// function insertTwo(){
+//     numberValue = document.getElementById("twoButton").textContent;
+//     document.getElementById("evaluationText").innerText += numberValue;
+// }
 
-function insertTwo(){
-    numberValue = document.getElementById("twoButton").textContent;
-    document.getElementById("evaluationText").innerText += numberValue;
-}
+// function insertThree(){
+//     numberValue = document.getElementById("threeButton").textContent;
+//     document.getElementById("evaluationText").innerText += numberValue;
+// }
 
-function insertThree(){
-    numberValue = document.getElementById("threeButton").textContent;
-    document.getElementById("evaluationText").innerText += numberValue;
-}
+// function insertMinus(){
+//     numberValue = document.getElementById("minusButton").textContent;
+//     document.getElementById("evaluationText").innerText += numberValue;
+// }
 
-function insertMinus(){
-    numberValue = document.getElementById("minusButton").textContent;
-    document.getElementById("evaluationText").innerText += numberValue;
-}
+// function insertZero(){
+//     numberValue = document.getElementById("zeroButton").textContent;
+//     document.getElementById("evaluationText").innerText += numberValue;
+// }
 
-function insertZero(){
-    numberValue = document.getElementById("zeroButton").textContent;
-    document.getElementById("evaluationText").innerText += numberValue;
-}
+// function insertDecimal(){
+//     numberValue = document.getElementById("decimalButton").textContent;
+//     document.getElementById("evaluationText").innerText += numberValue;
+// }
 
-function insertDecimal(){
-    numberValue = document.getElementById("decimalButton").textContent;
-    document.getElementById("evaluationText").innerText += numberValue;
-}
+
+//condensed version of insertvalue() function
+
+document.querySelector('#buttonContainer')
+    .addEventListener('click', event => {
+      let numberValue = event.target.value;
+        document.getElementById("evaluationText").innerText += numberValue;
+    });
 
