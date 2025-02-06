@@ -24,12 +24,12 @@ function division(term1, operand, term2) {
 };
 
 let userNumberOne;
-let userOperator;
+let userOperator = '';
 let userNumberTwo;
+let result;
+
 
 function evaluate(userNumberOne, userOperator, userNumberTwo) {
-    let result;
-
     if (userOperator == '+') {
         result = addition(userNumberOne, userOperator, userNumberTwo);
     } else if (userOperator == '-') {
@@ -41,52 +41,69 @@ function evaluate(userNumberOne, userOperator, userNumberTwo) {
     }
 
     document.getElementById("evaluationText").innerText = result;
+    userNumberOne = '';
+    userOperator = '';
+    userNumberTwo = '';
+
 }
 
 document.querySelector('#numberButtons')
     .addEventListener('click', event => {
         if (event.target.value == undefined || event.target.value == '+' || event.target.value == '-' || event.target.value == '/' || event.target.value == '*') {
             return;
+        } else if (document.querySelector('#evaluationText').innerText == result){
+            document.querySelector('#evaluationText').innerText = event.target.value;
         } else {
       let numberValue = event.target.value;
+        // document.getElementById("evaluationText").innerText = '';
         document.getElementById("evaluationText").innerText += numberValue;
         }
     });
 
-
 document.querySelector('#operatorButtons')
     .addEventListener('click', event => {
+
+        if (document.querySelector('#evaluationText').innerText == result) {
+            document.querySelector('#subEvaluationText').innerText = '';
+        }
+
+        if (((userOperator != '' &&  document.querySelector('#evaluationText').innerText == '')) || (userOperator != '' && document.querySelector('#evaluationText').innerText == result)) {
+            return userOperator = event.target.value;
+            ;
+        }
+
+        if (userOperator != '' && event.target.value != '') {
+            userNumberTwo = document.querySelector('#evaluationText').innerText;
+            evaluate(userNumberOne, userOperator, userNumberTwo);
+            userNumberOne = document.querySelector('#evaluationText').innerText;
+            // document.querySelector('#subEvaluationText').innerText = '';
+            userOperator = event.target.value;
+            return;
+        } 
+
         if (event.target.value == '') {
             return;
         } else {
             userNumberOne = document.querySelector('#evaluationText').innerText;
+            document.querySelector('#subEvaluationText').innerText += (userNumberOne + event.target.value);
             document.querySelector('#evaluationText').innerText = '';
-            userOperator = event.target.value;        
+            userOperator = event.target.value;
+            return;
         }
 
     });
 
+
 document.querySelector('#evaluateButton')
     .addEventListener('click', event => {
         userNumberTwo = document.querySelector('#evaluationText').innerText;
+        document.querySelector('#subEvaluationText').innerText += userNumberTwo;
         evaluate(userNumberOne, userOperator, userNumberTwo);
+        userNumberOne = '';
+        userOperator = '';
+        userNumberTwo = '';
+
 
     })
-
-//     document.querySelector('#buttonContainer')
-//     .addEventListener('click', event => {
-
-//         if (event.target.value == undefined || event.target.value == '+' || event.target.value == '-' || event.target.value == '/' || event.target.value == '*') {
-//         userOperator = event.target.values
-//         };
-
-
-    
-//         console.log(userNumberOne);
-//         console.log(document.querySelector('#evaluationText').innerText)
-//         console.log(userOperator);
-    
-//     });
-   
     
 
