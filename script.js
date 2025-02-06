@@ -30,6 +30,7 @@ let result;
 
 
 function evaluate(userNumberOne, userOperator, userNumberTwo) {
+
     if (userOperator == '+') {
         result = addition(userNumberOne, userOperator, userNumberTwo);
     } else if (userOperator == '-') {
@@ -40,7 +41,7 @@ function evaluate(userNumberOne, userOperator, userNumberTwo) {
         result = division(userNumberOne, userOperator, userNumberTwo);
     }
 
-    document.getElementById("evaluationText").innerText = result;
+    document.getElementById("evaluationText").innerText = Math.round(result * 100) / 100;
     userNumberOne = '';
     userOperator = '';
     userNumberTwo = '';
@@ -96,14 +97,17 @@ document.querySelector('#operatorButtons')
 
 document.querySelector('#evaluateButton')
     .addEventListener('click', event => {
+
+        if (isNaN(userNumberOne)) {
+            return;
+        }
+
         userNumberTwo = document.querySelector('#evaluationText').innerText;
         document.querySelector('#subEvaluationText').innerText += userNumberTwo;
         evaluate(userNumberOne, userOperator, userNumberTwo);
         userNumberOne = '';
         userOperator = '';
         userNumberTwo = '';
-
-
-    })
+    });
     
 
