@@ -98,7 +98,7 @@ document.querySelector('#operatorButtons')
 document.querySelector('#evaluateButton')
     .addEventListener('click', event => {
 
-        if (isNaN(userNumberOne)) {
+        if (isNaN(userNumberOne) || userNumberOne == '') {
             return;
         }
 
@@ -110,4 +110,13 @@ document.querySelector('#evaluateButton')
         userNumberTwo = '';
     });
     
+document.querySelector('#clearButton')
+    .addEventListener('click', event => {
+        userNumberOne = '';
+        userOperator = '';
+        userNumberTwo = '';
+        document.querySelector('#subEvaluationText').innerText = '';
+        document.querySelector('#evaluationText').innerText = '';
 
+
+    })
