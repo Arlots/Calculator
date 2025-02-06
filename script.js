@@ -61,6 +61,15 @@ function evaluate(userNumberOne, userOperator, userNumberTwo) {
 
 document.querySelector('#numberButtons')
     .addEventListener('click', event => {
+
+        if (event.target.value == '.') {
+        let decimalCheck = document.querySelector('#evaluationText').innerText;
+            if (decimalCheck.includes(".")) {
+                return;
+            }
+        };
+
+
         if (event.target.value == undefined || event.target.value == '+' || event.target.value == '-' || event.target.value == '/' || event.target.value == '*') {
             return;
         } else if (document.querySelector('#evaluationText').innerText == result){
@@ -130,4 +139,4 @@ document.querySelector('#clearButton')
         document.querySelector('#evaluationText').innerText = '';
 
 
-    })
+    });
