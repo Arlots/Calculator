@@ -31,6 +31,17 @@ let result;
 
 function evaluate(userNumberOne, userOperator, userNumberTwo) {
 
+    if (userOperator == '/' && userNumberTwo == '0') {
+        userNumberOne = '';
+        userOperator = '';
+        userNumberTwo = '';
+        document.querySelector('#subEvaluationText').innerText = '';
+        document.querySelector('#evaluationText').innerText = '';
+        alert("Dividing by Zero is not possible!")
+        return;
+
+    }
+
     if (userOperator == '+') {
         result = addition(userNumberOne, userOperator, userNumberTwo);
     } else if (userOperator == '-') {
